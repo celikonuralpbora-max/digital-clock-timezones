@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>⏰</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">⏰ Digital Clock</h1>
+            <div class="header-controls">
+                <button class="btn-icon" id="formatToggle" title="Toggle 12/24 hour format">
+                    <span>24h</span>
+                </button>
+                <button class="btn-icon" id="themeToggle" title="Toggle dark/light theme">
+                    <span>🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Search & Add Section -->
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="timezoneSearch" 
+                    class="search-input" 
+                    placeholder="Search cities or time zones (e.g., Tokyo, America/New_York)"
+                    autocomplete="off"
+                >
+                <button class="btn-primary" id="addBtn">+ Add Time Zone</button>
+            </div>
+            <div class="suggestions" id="suggestions"></div>
+        </div>
+
+        <!-- Clock Grid -->
+        <main class="clocks-grid" id="clocksGrid">
+            <!-- Clocks will be dynamically added here -->
+        </main>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+            <p>🌍 No time zones added yet</p>
+            <p class="empty-state-hint">Search and add a time zone to get started!</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/timezones.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
